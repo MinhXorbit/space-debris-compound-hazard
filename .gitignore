@@ -1,0 +1,40 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Data files (large CSVs not tracked in repo — download via fetch_radlab_data.py)
+data/*.csv
+
+# Generated figures (reproducible from source — not tracked)
+# paper/figures/*.png  ← uncomment if you want to exclude figures
+
+# Compiled LaTeX artifacts
+paper/*.aux
+paper/*.log
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.DS_Store
+
+# Jupyter
+*.ipynb_checkpoints/
