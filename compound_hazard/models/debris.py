@@ -1,9 +1,16 @@
 """
 Altitude-dependent space debris flux model for the LEO untrackable (LNT) population.
 
-Parameterized from ESA MASTER-8 (2021) and NASA ORDEM 3.2 (2019) published flux
-tables at 51.6° orbital inclination. The model uses a Gaussian mixture to capture
-the dominant debris shells from historical fragmentation events.
+This is a PHENOMENOLOGICAL relative-flux index, NOT a fit to gridded flux tables.
+The model returns a debris flux normalized to the ISS baseline (ISS = 1.0). Its
+altitude structure is a Gaussian mixture whose shell *centers* correspond to the
+dominant debris concentration bands reported by ESA MASTER-8 (2021) and NASA
+ORDEM 3.2 (2019) at ~51.6 deg inclination. The component *amplitudes* are
+illustrative parameters chosen to reproduce the qualitative shell structure; they
+are NOT calibrated against the published flux tables. The relative altitude
+ranking produced by the model is robust to these amplitudes, but absolute hazard
+ratios should be treated as order-of-magnitude estimates. Fitting the amplitudes
+directly to gridded MASTER-8 / ORDEM 3.2 output is identified as future work.
 
 Key debris sources represented:
 - Fengyun-1C ASAT (2007) fragmentation cloud: ~850 km, 98.6° SSO
@@ -54,8 +61,9 @@ class DebrisFluxModel:
         self.inclination_deg = inclination_deg
         self.iss_altitude_km = iss_altitude_km
 
-        # Gaussian mixture parameters (center, sigma, peak amplitude)
-        # calibrated to MASTER-8/ORDEM 3.2 flux tables
+        # Gaussian mixture parameters (center, sigma, peak amplitude).
+        # Shell CENTERS match debris bands reported in MASTER-8/ORDEM 3.2;
+        # peak AMPLITUDES are illustrative (not fit to the published flux tables).
         self._fengyun_center_km: float = 850.0
         self._fengyun_sigma_km: float = 80.0
         self._fengyun_peak: float = 0.6
@@ -68,8 +76,9 @@ class DebrisFluxModel:
         self._frag_sigma_km: float = 70.0
         self._frag_peak: float = 0.15
 
-        # Background exponential scale height (km)
-        # Matches ORDEM 3.2 decadal flux progression 400–900 km
+        # Background exponential scale height (km).
+        # Order-of-magnitude consistent with the ORDEM 3.2 flux rise across
+        # 400-900 km; not fit to the published tables.
         self._H_background_km: float = 150.0
 
         # Cache the ISS normalization factor
