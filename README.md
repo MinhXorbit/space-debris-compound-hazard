@@ -3,7 +3,7 @@
 **Compound orbital hazard analysis: ionizing radiation + space debris Pareto optimization for commercial human spaceflight.**
 
 Companion code for:
-> Nguyen, M. (2026). *Space Debris Risk in an Era of Commercial Human Spaceflight: Catalog Incompleteness, Ground-Loop Latency, and the Imperative for Autonomous Onboard Detection.* Submitted to *Acta Astronautica*.
+> Nguyen, M. (2026). *Space Debris Risk in an Era of Commercial Human Spaceflight: Catalog Incompleteness, Ground-Loop Latency, and the Imperative for Autonomous Onboard Detection.* Unpublished manuscript.
 
 ---
 
@@ -113,14 +113,13 @@ H(α) = α · D_norm + (1 − α) · F_norm, where both hazards are normalized t
 ## Citation
 
 ```bibtex
-@article{nguyen2026debris,
+@unpublished{nguyen2026debris,
   title   = {Space Debris Risk in an Era of Commercial Human Spaceflight:
              Catalog Incompleteness, Ground-Loop Latency, and the Imperative
              for Autonomous Onboard Detection},
   author  = {Nguyen, Minh},
-  journal = {Acta Astronautica},
   year    = {2026},
-  note    = {Submitted}
+  note    = {Unpublished manuscript}
 }
 ```
 
@@ -129,7 +128,7 @@ H(α) = α · D_norm + (1 − α) · F_norm, where both hazards are normalized t
 ## Author
 
 **Minh Nguyen**, xOrbita Inc., Dallas, TX
-NASA Open Science Data Repository (OSDR) Active Working Group Member
+Former member, NASA Open Science Data Repository (OSDR) Analysis Working Group (2025)
 [Mnguyen@xorbita.com](mailto:Mnguyen@xorbita.com)
 
 ## License
