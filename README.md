@@ -128,7 +128,7 @@ H(α) = α · D_norm + (1 − α) · F_norm, where both hazards are normalized t
 ## Author
 
 **Minh Nguyen**, xOrbita Inc., Dallas, TX
-Former member, NASA Open Science Data Repository (OSDR) Analysis Working Group (2025)
+Member, NASA Open Science Data Repository (OSDR) Analysis Working Group (active June to November 2025)
 [Mnguyen@xorbita.com](mailto:Mnguyen@xorbita.com)
 
 ## License
